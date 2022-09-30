@@ -35,12 +35,12 @@ export default function Textform(props) {
     <div>
         <div className='container' style={{color:props.mode === 'dark' ? 'white' : '#042743' }}>
         <label htmlFor="mybox" className="form-label"> {props.heading}</label>
-        <textarea className='form-control' id="mybox" value={text} style={{backgroundColor:props.mode === 'dark' ? 'grey' : 'white',color:props.mode === 'dark' ? 'white' : '#042743' }} onChange={handleOnChange} rows='8'></textarea>
-        <button className='btn btn-primary mx-1 my-1' onClick={handleUpClick}>convert to upper case</button>
-        <button className='btn btn-primary mx-1 my-1' onClick={handleloClick}>convert to lower case</button>
-        <button className='btn btn-primary mx-1 my-1' onClick={handleClearClick}>clear text</button>
-        <button className='btn btn-primary mx-1 my-1' onClick={handleToCopy}>copy text</button>
-        <button className='btn btn-primary mx-1 my-1' onClick={handleExtraSpaces}>remove extra handleExtraSpaces</button>
+        <textarea className='form-control' id="mybox" value={text} style={{backgroundColor:props.mode === 'dark' ? '#13466e' : 'white',color:props.mode === 'dark' ? 'white' : '#042743' }} onChange={handleOnChange} rows='8'></textarea>
+        <button  disabled={text.length===0} className='btn btn-primary mx-1 my-1' onClick={handleUpClick}>convert to upper case</button>
+        <button disabled={text.length===0}className='btn btn-primary mx-1 my-1' onClick={handleloClick}>convert to lower case</button>
+        <button disabled={text.length===0}className='btn btn-primary mx-1 my-1' onClick={handleClearClick}>clear text</button>
+        <button disabled={text.length===0}className='btn btn-primary mx-1 my-1' onClick={handleToCopy}>copy text</button>
+        <button disabled={text.length===0}className='btn btn-primary mx-1 my-1' onClick={handleExtraSpaces}>remove extra handleExtraSpaces</button>
         </div>
     </div>
     <div className='container my-3' style={{color:props.mode === 'dark' ? 'white' : '#042743' }}>
